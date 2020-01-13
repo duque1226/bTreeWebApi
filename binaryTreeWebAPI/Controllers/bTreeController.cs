@@ -22,6 +22,14 @@ namespace binaryTreeWebAPI.Controllers
         }
 
         [HttpGet]
+        [Route("getBtrees")]
+        public IEnumerable<string> Get()
+        {
+            // Obteniendo todos los nombres de los arboles binarios almacenados en base de datos
+            return (_ibTree.getBTreeNames());
+        }
+
+        [HttpGet]
         [Route("lca")]
         public IActionResult calcLCA(string bTreeName, int node1, int node2)
         {
