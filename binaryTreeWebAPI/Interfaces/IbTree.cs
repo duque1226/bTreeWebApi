@@ -13,5 +13,8 @@ namespace binaryTreeWebAPI.Interfaces
 
         // Método para calcular el LCA
         int calculateLCA(ref Node actualNode, int value1, int value2, ref Node originNode);
+
+        // Método para crear un arbol binario en base de datos
+        void saveBTree(DataFormat bTreeJSON);
     }
 }
